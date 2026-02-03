@@ -1,2 +1,2 @@
 # avenga-homeworks-js-advanced
-this is repo for js advansed
+this is repo for js advanced
