@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {  padding: 20px; background-color: #f4f7f6; }
+        .container { max-width: 600px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        input, textarea, button { display: block; width: 100%; margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        .color-input { height: 45px; cursor: pointer; }
+        .btn-group { display: flex; gap: 10px; }
+        #addBtn { background-color: #28a745; color: white; border: none; }
+        #showBtn { background-color: #007bff; color: white; border: none; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #eee; }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>New Reminder</h2>
+    <input type="text" id="title" placeholder="Reminder Title" required>
+    <input type="text" id="priority" placeholder="Priority (e.g. High, 1, Urgent)">
+    <input type="color" id="color" class="color-input" value="#ff0000">
+    <textarea id="description" placeholder="Add details..." rows="3"></textarea>
+    
+    <div class="btn-group">
+        <button id="addBtn">Add Reminder</button>
+        <button id="showBtn">Show All Reminders</button>
+    </div>
+
+    <div id="displayArea">
+        <table id="reminderTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Priority</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+</div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
